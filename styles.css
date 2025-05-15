@@ -400,8 +400,9 @@ p, li {
 }
 
 .squire-logo {
-  width: 1000px;
+  max-width: 100%;
   height: auto;
+  display: block;
 }
 
 footer {
@@ -422,6 +423,12 @@ footer {
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .squire-logo {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

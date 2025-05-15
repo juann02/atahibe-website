@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atahibe Studios</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script defer src="transition.js"></script>
+</head>
+
+<body>
+  <body>
+    <div id="vanta-bg"></div> <!-- animated background layer -->
+  
+    <div class="landing fade-in">
+      <img src="images/atahibe log.png" alt="Atahibe Studios Logo" class="logo" />
+      <h1>Welcome to Atahibe Studios</h1>
+      <p><button class="enter-btn" onclick="startTransition()">Enter</button></p>
+    </div>
+  </body>
+
+    <!-- For animated background elements -->
+  <ul class="background">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+ </ul>
+
+ <script>
+  const bg = document.querySelector('.background');
+
+  for (let i = 0; i < 40; i++) {
+    const li = document.createElement('li');
+
+    // Random position
+    const top = Math.floor(Math.random() * 100);  // 0 to 99
+    const left = Math.floor(Math.random() * 100);
+
+    li.style.top = `${top}vh`;
+    li.style.left = `${left}vw`;
+
+    // Random animation delay (staggered entry)
+    li.style.animationDelay = `${i * 2}s`;
+
+    // Optional: Add variation in border color
+    if (i % 3 === 0) {
+      li.style.borderColor = "#220511";
+    }
+
+    bg.appendChild(li);
+  }
+</script>
